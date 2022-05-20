@@ -39,7 +39,7 @@ if __name__ == '__main__':
     #dataset下为初始选定的五个语料文件，讲处理过的文件存储在output_dataset目录下
     files = read_novel("./dataset", "./output_dataset")
     test_name = ['黄蓉','韦小宝','小龙女','乔峰','赵敏']
-    test_wugong = ['降龙十八掌','九阴真经','一阳指','北冥神功','亢龙有悔']
+    test_wugong = ['降龙十八掌','九阴真经','一阳指','降龙十八掌','亢龙有悔']
     for i in range(0, 5):
         name = "./output_dataset/" + files[i]
         model = Word2Vec(sentences=LineSentence(name), hs=1, min_count=10, window=5, vector_size=200, sg=0, epochs=200)
